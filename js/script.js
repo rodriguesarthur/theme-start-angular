@@ -5,8 +5,10 @@ $(document).ready(function(){
 	$(window).scroll(function(){
 		if ($(document).scrollTop() > 100) {
 			$('#menu-fixed').css('top','0');
+			$('#box-btn-up').css('bottom','15px');
 		} else {
 			$('#menu-fixed').css('top','-50px');
+			$('#box-btn-up').css('bottom','-50px');
 		};
 
 		if ($(document).scrollTop() > 200) {
@@ -14,6 +16,13 @@ $(document).ready(function(){
 			$('#services h2').css('color','#000');
 			$('#services p').css('color','#868e96');
 		};
+
+	});
+
+	$('#box-btn-up').click(function(){
+		$('html, body').animate({
+			scrollTop: 0
+		}, 1000);
 	});
 
 	$('#btn-bars').click(function(){
