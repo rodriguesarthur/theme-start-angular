@@ -1,0 +1,112 @@
+@media only screen and (max-width: 768px) {
+
+	#menu-fixed {
+		display: none;
+	}
+
+	#menu-fixed ul{
+		display: none;
+	}
+
+	#menu-mobile {
+		display: block;
+		position: fixed;
+		background-color: #212529;
+		width: 100%;
+		height: 50px;
+		z-index: 100;
+	}
+
+	#menu-mobile h1 {
+		font-family: 'KaushanScript-Regular';
+		color: #fed136;
+		font-size: 20px;
+		margin-top: 15px;
+		margin-left: 10px;
+		cursor: pointer;
+	}
+
+	#btn-bars {
+		display: block;
+		outline: none;
+		margin-top: 8px;
+		margin-right: 10px;
+		width: 35px;
+		height: 35px;
+		background: transparent;
+		border: 1px solid #52575D;
+		border-radius: 6px;
+		padding: 0;
+	}
+
+	#btn-bars i {
+		color: #fff;
+		font-size: 1.5em;
+	}
+
+	#menu-slider {
+		display: block;
+		position: fixed;
+		width: 100%;
+		height: 150px;
+		background: #3E4247;
+		top: -110px;
+		z-index: 99;
+		transition: 1s;
+	}
+
+	#menu-slider.open {
+		top: 50px!important;
+	}
+
+	#menu-slider ul {
+		text-align: center;
+		padding-top: 10px;
+	}
+
+	#menu-slider ul li {
+		list-style-type: none;
+		margin-bottom: 15px;
+	}
+
+	#menu-slider ul li a {
+		color: #fff;
+		font-size: 1em;
+		font-family: 'Montserrat-Regular';
+		text-transform: uppercase;
+		text-decoration: none;
+	}
+
+	#menu {
+		display: none;
+	}
+
+	#menu-mobile {
+		display: block;
+	}
+
+	#center-top h2 {
+		margin-top: 200px;
+		font-size: 2em;
+	}
+
+	#center-top h1 {
+		margin-top: 20px;
+		font-size: 4em;
+	}
+
+	#services {
+		margin-top: -200px;
+	}
+
+	#team .col-sm-12 {
+		padding: 0 20px;
+	}
+}
+
+@media only screen and (max-width: 320px) {
+	#menu h1 {
+		font-size: 1.5em;
+		margin-left: 80px;
+	}
+}
