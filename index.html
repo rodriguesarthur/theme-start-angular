@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Start Bootstrap</title>
 		<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="css/estilo.css">
 		<link rel="stylesheet" type="text/css" href="css/estilo-mobile.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
@@ -19,7 +19,7 @@
 					<ul>
 						<li><a id="link-services-mobile">Services</a></li>
 						<li><a id="link-team-mobile">Team</a></li>
-						<li><a id="link-about-mobile">About</a></li>
+						<li><a id="link-portfolio-mobile">Portfolio</a></li>
 						<li><a id="link-contact-mobile">Contact</a></li>
 					</ul>
 				</div>
@@ -37,7 +37,7 @@
 					<ul class="pull-right list-inline">
 						<li><a id="link-services-fixed">Services</a></li>
 						<li><a id="link-team-fixed">Team</a></li>
-						<li><a id="link-about-fixed">About</a></li>
+						<li><a id="link-portfolio-fixed">Portfolio</a></li>
 						<li><a id="link-contact-fixed">Contact</a></li>
 					</ul>
 				</div>
@@ -49,7 +49,7 @@
 					<ul class="pull-right">
 						<li><a id="link-services">Services</a></li>
 						<li><a id="link-team">Team</a></li>
-						<li><a id="link-about">About</a></li>
+						<li><a id="link-portfolio">Portfolio</a></li>
 						<li><a id="link-contact">Contact</a></li>
 					</ul>
 				</div>
@@ -59,7 +59,7 @@
 				<div class="container text-center">
 					<h2>Welcome To Our Studio!</h2>
 					<h1>IT'S NICE TO MEET YOU</h1>
-					<a href="#" class="btn btn-default">TELL ME MORE</a>
+					<a id="down-page" class="btn btn-down-page"><i class="fa fa-angle-double-down"></i></a>
 				</div>
 			</div>
 
@@ -67,6 +67,7 @@
 
 		<section>
 
+			<!-- services -->
 			<div id="services" ng-controller='servicesctrl'>
 				<div class="serv container text-center">
 					<h1>Services</h1>
@@ -74,17 +75,22 @@
 
 					<div class="row text-center icones">
 
-						<div class="col-md-4" ng-repeat="services in services">
+						<div class="col-md-3" ng-repeat="services in services">
 							<span><i class="{{services.icon}}"></i></span>
 							<h2>{{services.title}}</h2>
 							<p>{{services.description}}</p>
 						</div>
 					</div>
 
+					<div class="row">
+						<a target="_blank" href="https://github.com/rodriguesarthur/theme-start-angular" class="btn btn-source"><i class="fab fa-github"></i>View Source</a>
+					</div>
+
 				</div><!-- /container -->
 			</div><!-- /services -->
 
-			<div id="team" ng-controller="teamctrl"><!-- team -->
+			<!-- team -->
+			<div id="team" ng-controller="teamctrl">
 				<div class="container text-center">
 					<h1>Team</h1>
 					<p>Lorem ipsum dolor sit amet consectetur.</p>
@@ -103,8 +109,29 @@
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
 					</div>
 
-				</div><!-- /team -->
-			</div>
+				</div><!-- /container -->
+			</div><!-- /team -->
+
+			<div id="portfolio" ng-controller="portfolioctrl">
+				<div class="container text-center">
+					<h1>Portfolio</h1>
+					<p>Lorem ipsum dolor sit amet consectetur.</p>
+
+					<div class="col-lg-12 images-portfolio">
+						<div class="col-sm-3"  ng-repeat="images in portfolio">
+							<img src="{{images.image}}" alt="{{images.title}}">
+						</div>
+					</div>
+
+					<div class="mask-image-open"></div>
+
+					<div id="image-open">
+						<img src="" alt="">
+						<a class="close-box-image"><i class="fas fa-times"></i></a>
+					</div>
+
+				</div><!-- /container -->
+			</div><!-- /portfolio -->
 
 			<div id="box-btn-up">
 				<a id="btn-up"><i class="fa fa-angle-up"></i></a>
