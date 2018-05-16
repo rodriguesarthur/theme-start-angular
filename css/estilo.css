@@ -342,6 +342,10 @@ header {
 	color: #333;
 }
 
+#portfolio .container {
+	margin-bottom: 100px;
+}
+
 #box-btn-up {
 	display: none;
 }
