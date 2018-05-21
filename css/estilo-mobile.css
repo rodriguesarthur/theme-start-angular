@@ -133,6 +133,17 @@
 	#portfolio.open-box-image #image-open img {
 		width: 90%;
 	}
+
+	#footer-page p {
+		float: none!important;
+	}
+
+	#footer-page .list-social {
+		float: none!important;
+		margin-right: 0;
+		margin-left: 10px;
+		margin-top: 20px;
+	}
 }
 
 @media only screen and (max-width: 370px) {

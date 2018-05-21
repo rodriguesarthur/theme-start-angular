@@ -100,6 +100,25 @@ $(document).ready(function(){
 		$('#menu-slider').removeClass('open');
 	});
 
+	$('#link-contact').click(function(){
+		$('html, body').animate({
+			scrollTop: $('div#contact').offset().top
+		}, 1000)
+	});
+
+	$('#link-contact-fixed').click(function(){
+		$('html, body').animate({
+			scrollTop: $('div#contact').offset().top
+		}, 1000);
+	});
+
+	$('#link-contact-mobile').click(function(){
+		$('html, body').animate({
+			scrollTop: $('div#contact').offset().top
+		}, 1000);
+		$('#menu-slider').removeClass('open');
+	});
+
 	//ANIMATE SPAN SERVICES
 	$("#services span").on("mouseover" , function(){
 		$(this).css("background-color","#e3b928");
