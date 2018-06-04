@@ -289,6 +289,7 @@ header {
 	width: 100%;
 	cursor: pointer;
 	filter: blur(0px);
+	z-index: 80;
 }
 
 #portfolio .images-portfolio img:hover{
